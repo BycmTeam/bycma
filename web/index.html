@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="static/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+
+    <!--
+    {"uid":$("#uid").val(),
+                    "pwd":$("#upwd").val(),
+                    "usn":$("#uusn").val(),
+                    "uage":$("#uage").val()} -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#bu").click(function () {
+                //alert($("#uusn").val());
+                $.ajax({
+                    url: "",
+                    method: 'get',
+                    dataType: 'json',
+                    //注意input name属性和setter匹配
+                    success: function (data) {
+
+                        var ca = "";                      //利用Url脚本跳转页面是ajax常用的跳转页面方式，
+                        $.each(data, function (i) {
+                            ca += "<tr><td>" + data[i].pwd+ "<td>" + data[i].uage+ "<td>" + data[i].uid+ "<td>" + data[i].usn+"<td><tr>"
+
+                        });
+                        $("#a").html(ca);
+                    },
+
+                    error: function () {
+                        alert("error");
+                    }
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+Register Users<br/>
+<table>
+<tr>
+    <th>id</th><th>Name</th><th>age</th><th>Grade</th>
+</tr>
+
+</table>
+<table id="a">
+
+</table>
+<input type="button" value="提交" id="bu">
+</body>
+</html>

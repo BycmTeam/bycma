@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ 5.针对所有实体类对象的映射配置文件 映射
+ namespace呼应的是mapper接口的路径
+-->
+<mapper namespace="com.spring.Dao.UserMapper">
+<!--select t.*,e.* from student t,home e where t.stu_id=e.home_id;-->
+    <!--<resultMap id="UsersResult" type="com.spring.entity.User">
+        <association property=""
+      <id column="uid" property="uid" jdbcType="INTEGER" javaType="Integer" />
+     <result column="usn" property="usn" jdbcType="VARCHAR" javaType="string"/>
+     <result column="pwd" property="pwd" jdbcType="VARCHAR" javaType="string"/>
+     <result column="uage" property="uage" jdbcType="INTEGER" javaType="Integer"/>
+
+    </resultMap>
+   
+    <select id="GetAllUsers" resultMap="UsersResult">
+       select * from user
+    </select>-->
+   
+</mapper>
+
+
+
+
+
+
+
+
+
+
